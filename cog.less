@@ -1,6 +1,6 @@
 @teeth: 12;
 @speed: 16s;
-@fgColor: hsl(228, 6%, 10%);
+@fgColor: #18191b;
 @bgColor: #242529;
 @textColor: #fff;
 
@@ -126,28 +126,12 @@ body {
     color: @textColor;
   }
 
-  .cogs {
-    background: inherit;
-  }
-  .cog-layer {
-    -webkit-clip-path: inset(0% 50% 0% 0%);
-    clip-path: inset(0% 50% 0% 0%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
   .cog {
     position: absolute;
     top: calc(~"50% - 0.6em");
     left: calc(~"50% - 0.6em");
-  }
-  .cog.a .wheel { display: none; }
-  .cog.b {
-    .animation(none);
-    .teeth { display: none; }
+    z-index: 2;
+    font-size: 1.75em;
   }
 
   .mask-r {
