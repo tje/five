@@ -32,6 +32,10 @@ body {
   margin: 0.1em;
 }
 
+.cog.reverse {
+  .animation-direction(reverse);
+}
+
 .cog > .wheel {
   border-radius: 50%;
   box-sizing: border-box;
@@ -132,6 +136,12 @@ body {
     left: calc(~"50% - 0.6em");
     z-index: 2;
     font-size: 1.75em;
+  }
+  .cog.b {
+    left: calc(~"50% - 1.7em");
+    opacity: 0.5;
+    .animation-delay(-@speed / @teeth / 2);
+    .wheel { background: transparent; }
   }
 
   .mask-r {
