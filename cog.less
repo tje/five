@@ -1,10 +1,11 @@
 @teeth: 12;
 @speed: 16s;
 @fgColor: #18191b;
-@bgColor: #9a1a1a;
+@bgColor: transparent;
 @textColor: #fff;
-@cogAColor: @bgColor;
-@poiX: 80%;
+@cogAColor: @fgColor;
+@fontSize: 30;
+@poiX: 60%;
 
 @import "prefixer.less";
 
@@ -113,8 +114,8 @@ body {
 }
 
 #logo {
-  font-size: 20vw;
-  font-size: 20vmax;
+  font-size: ~"@{fontSize}vw";
+  font-size: ~"@{fontSize}vmax";
   font-weight: 600;
   line-height: 0.5em;
   height: 0.5em;
@@ -153,6 +154,7 @@ body {
     left: calc(~"@{poiX} - 1.55em");
     .transform(rotateY(180deg) rotateZ(19deg));
     //.teeth { .animation-delay(-.87s); }
+    opacity: 0.75;
   }
 
   .cog.c {
@@ -160,6 +162,7 @@ body {
     left: calc(~"@{poiX} - 1.35em");
     z-index: 1;
     font-size: 4em;
+    opacity: 0.5;
   }
 
   .mask-r {
