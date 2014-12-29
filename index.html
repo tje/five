@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sup Bro</title>
+  <link rel="stylesheet/less" type="text/css" href="cog.less" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript">
+    var teeth = 12;
+    less.modifyVars({
+      teeth: teeth
+    });
+    $(document).ready(function () {
+      $('*[data-teeth]').each(function () {
+        for (var i = 0, l = $(this).data('teeth') || teeth; i < l; i++) {
+          $(this).append('<div class="tooth" />');
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="cog" style="font-size: 0"></div>
+  <div id="logo">
+    <div id="m">V</div>
+    <div class="cogs">
+      <div class="cog-layer">
+        <div class="cog a" style="font-size: 1.5em;">
+          <div class="wheel"></div>
+          <div class="teeth" data-teeth></div>
+        </div>
+      </div>
+      <div class="cog b" style="font-size: 1.5em; z-index: 3;">
+        <div class="wheel"></div>
+        <div class="teeth" data-teeth></div>
+      </div>
+      <div class="mask-r"></div>
+    </div>
+  </div>
+  <span class="alignment"></span>
+</body>
+</html>
