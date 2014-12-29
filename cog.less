@@ -13,7 +13,7 @@ body {
   height: 100vh;
   font-size: 0;
   text-align: center;
-  background: @fgColor;
+  background: @textColor;
 }
 
 .alignment {
@@ -111,6 +111,7 @@ body {
 }
 
 #logo {
+  font-size: 20vw;
   font-size: 20vmax;
   font-weight: 600;
   line-height: 0.5em;
@@ -138,13 +139,13 @@ body {
   .cog {
     position: absolute;
     top: calc(~"50% - 0.6em");
-    left: calc(~"@{poiX}% - 0.6em");
+    left: calc(~"@{poiX} - 0.6em");
     z-index: 2;
     font-size: 1.75em;
   }
   .cog.b {
     top: calc(~"50% - 1.1em");
-    left: calc(~"@{poiX}% - 1.55em");
+    left: calc(~"@{poiX} - 1.55em");
     .animation-delay(-.87s);
     .wheel { background: transparent; }
   }
