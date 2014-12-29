@@ -138,10 +138,19 @@ body {
     font-size: 1.75em;
   }
   .cog.b {
-    left: calc(~"50% - 1.7em");
-    opacity: 0.5;
-    .animation-delay(-@speed / @teeth / 2);
+    top: calc(~"50% - 1.1em");
+    left: calc(~"50% - 1.55em");
+    opacity: 0.75;
+    .animation-delay(-.87s);
     .wheel { background: transparent; }
+  }
+
+  .cog.c {
+    top: 0;
+    left: -0.75em;
+    z-index: 1;
+    font-size: 4em;
+    opacity: 0.5;
   }
 
   .mask-r {
