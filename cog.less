@@ -2,7 +2,7 @@
 @speed: 16s;
 @fgColor: #18191b;
 @bgColor: #242529;
-@textColor: #fff;
+@textColor: @fgColor;
 
 @import "prefixer.less";
 
@@ -12,7 +12,7 @@ body {
   height: 100vh;
   font-size: 0;
   text-align: center;
-  background: @bgColor;
+  background: @fgColor;
 }
 
 .alignment {
@@ -140,7 +140,6 @@ body {
   .cog.b {
     top: calc(~"50% - 1.1em");
     left: calc(~"50% - 1.55em");
-    opacity: 0.75;
     .animation-delay(-.87s);
     .wheel { background: transparent; }
   }
@@ -150,7 +149,6 @@ body {
     left: -0.75em;
     z-index: 1;
     font-size: 4em;
-    opacity: 0.5;
   }
 
   .mask-r {
