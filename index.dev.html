@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Five</title>
-  <link rel="stylesheet/less" type="text/css" href="cog.css" />
+  <link rel="stylesheet/less" type="text/css" href="cog.less" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
   <script type="text/javascript">
     var teeth = 12;
+    less.modifyVars({
+      teeth: teeth
+    });
     $(document).ready(function () {
       $('*[data-teeth]').each(function () {
-        for (var i = 0; i < teeth; i++) {
+        for (var i = 0, l = $(this).data('teeth') || teeth; i < l; i++) {
           $(this).append('<div class="tooth" />');
         }
       });
