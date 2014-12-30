@@ -6,47 +6,7 @@
   <link rel="stylesheet" type="text/css" href="cog.css" />
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="http://use.edgefonts.net/dorsa:n4:all;source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js"></script>
-  <script type="text/javascript">
-    var teeth = 12;
-    var trackList = [
-        { title: 'Miscommunicate', duration: 259 }
-      , { title: 'Viscous Black Venom', duration: 231 }
-      , { title: 'Here\'s Your Fucking Remix, Asshole', duration: 204, liner: 'Remix of ANgR. MgMT. &ndash; Distant Light, Distant Warmth' }
-      , { title: 'Iron Piston', duration: 196 }
-      , { title: 'Muse', duration: 306 }
-      , { title: 'Dusty Beef', duration: 169 }
-      , { title: 'Coffin', duration: 262 }
-      , { title: 'Eyes', duration: 173, liner: 'Co-written with Kris Norris, bass guitar provided by Ryan Schremp' }
-      , { title: 'Untitled (216e_comp)', duration: 306 }
-      , { title: 'Untitled (264)', duration: 294 }
-      , { title: 'Untitled (235)', duration: 482 }
-    ];
-    $(document).ready(function () {
-      $('*[data-teeth]').each(function () {
-        for (var i = 0; i < teeth; i++) {
-          $(this).append('<div class="tooth" />');
-        }
-      });
-      var runTime = 0;
-      $(trackList).each(function () {
-        var $el = $('<li />');
-        runTime += this.duration;
-
-        var ts = [Math.floor(this.duration / 60), this.duration % 60];
-        ts[1] = (ts[1] < 10 ? '0' : '') + ts[1];
-        $el.text(this.title);
-        $('<small />').addClass('timestamp').text(ts.join(':')).appendTo($el);
-        if (this.hasOwnProperty('liner')) {
-          $('<small />').addClass('liner').html(this.liner).appendTo($el);
-        }
-        $el.appendTo('#tracklist');
-      });
-
-      var runTs = [Math.floor(runTime / 60), runTime % 60];
-      runTs[1] = (runTs[1] < 10 ? '0' : '') + runTs[1];
-      $('#runtime').text(runTs.join(':'));
-    });
-  </script>
+  <script type="text/javascript" src="cog.js"></script>
 </head>
 <body>
   <div id="title">
@@ -70,10 +30,20 @@
     <div class="mask-r"></div>
   </div>
   <div id="content">
-    <h1>Five</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum natus ullam qui consequuntur fugit nobis. Similique excepturi, magni harum. Fuga officiis, doloremque mollitia, similique tempore quod aliquam suscipit aspernatur labore?</p>
-    <ol id="tracklist"></ol>
-    <small>Total running time: <span id="runtime"></span></small>
+    <div class="layer-top">
+      <h1>Five</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum natus ullam qui consequuntur fugit nobis. Similique excepturi, magni harum. Fuga officiis, doloremque mollitia, similique tempore quod aliquam suscipit aspernatur labore?</p>
+      <ol id="tracklist"></ol>
+      <small>Total running time: <span id="runtime"></span></small>
+    </div>
+    <div class="cog d reverse">
+      <div class="wheel"></div>
+      <div class="teeth" data-teeth></div>
+    </div>
+    <div class="cog e">
+      <div class="wheel"></div>
+      <div class="teeth" data-teeth></div>
+    </div>
   </div>
 </body>
 </html>

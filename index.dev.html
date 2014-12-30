@@ -6,21 +6,14 @@
   <link rel="stylesheet/less" type="text/css" href="cog.less" />
   <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script type="text/javascript">
-    var teeth = 12;
-    less.modifyVars({
-      teeth: teeth
-    });
-    $(document).ready(function () {
-      $('*[data-teeth]').each(function () {
-        for (var i = 0, l = $(this).data('teeth') || teeth; i < l; i++) {
-          $(this).append('<div class="tooth" />');
-        }
-      });
-    });
-  </script>
+  <script src="http://use.edgefonts.net/dorsa:n4:all;source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js"></script>
+  <script type="text/javascript" src="cog.js"></script>
 </head>
 <body>
+  <div id="title">
+    <span>Modem</span>
+    <span class="alignment"></span>
+  </div>
   <div id="logo">
     <div id="m">V</div>
     <div class="cog a">
@@ -37,6 +30,21 @@
     </div>
     <div class="mask-r"></div>
   </div>
-  <span class="alignment"></span>
+  <div id="content">
+    <div class="layer-top">
+      <h1>Five</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum natus ullam qui consequuntur fugit nobis. Similique excepturi, magni harum. Fuga officiis, doloremque mollitia, similique tempore quod aliquam suscipit aspernatur labore?</p>
+      <ol id="tracklist"></ol>
+      <small>Total running time: <span id="runtime"></span></small>
+    </div>
+    <div class="cog d reverse">
+      <div class="wheel"></div>
+      <div class="teeth" data-teeth></div>
+    </div>
+    <div class="cog e">
+      <div class="wheel"></div>
+      <div class="teeth" data-teeth></div>
+    </div>
+  </div>
 </body>
 </html>
