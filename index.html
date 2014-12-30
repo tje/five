@@ -2,17 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sup Bro</title>
-  <link rel="stylesheet/less" type="text/css" href="cog.less" />
-  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+  <title>Five</title>
+  <link rel="stylesheet/less" type="text/css" href="cog.css" />
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="http://use.edgefonts.net/dorsa:n4:all;source-sans-pro:n4,n9,n7,i7,i4,n3,i3,n6,i6,i9,n2,i2:all.js"></script>
   <script type="text/javascript">
     var teeth = 12;
-    less.modifyVars({
-      teeth: teeth
-    });
-
     var trackList = [
         { title: 'Miscommunicate', duration: 259 }
       , { title: 'Viscous Black Venom', duration: 231 }
@@ -28,7 +23,7 @@
     ];
     $(document).ready(function () {
       $('*[data-teeth]').each(function () {
-        for (var i = 0, l = $(this).data('teeth') || teeth; i < l; i++) {
+        for (var i = 0; i < teeth; i++) {
           $(this).append('<div class="tooth" />');
         }
       });
