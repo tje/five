@@ -48,11 +48,11 @@ body {
   perspective: 0.25em;
   transform-style: preserve-3d;
   perspective-origin: 50% 50%;
-  -webkit-animation: cog-spin 16s infinite linear;
-  -moz-animation: cog-spin 16s infinite linear;
-  -ms-animation: cog-spin 16s infinite linear;
-  -o-animation: cog-spin 16s infinite linear;
-  animation: cog-spin 16s infinite linear;
+  -webkit-animation: cog-spin 60s infinite linear;
+  -moz-animation: cog-spin 60s infinite linear;
+  -ms-animation: cog-spin 60s infinite linear;
+  -o-animation: cog-spin 60s infinite linear;
+  animation: cog-spin 60s infinite linear;
 }
 .cog > .teeth > .tooth {
   width: 0.13333333em;
@@ -220,8 +220,12 @@ body {
   z-index: 2;
   font-size: 1.75em;
 }
+#logo .cog.a .wheel,
+#logo .cog.a .tooth {
+  background: #18191b;
+}
 #logo .cog.a .wheel {
-  background: #242529;
+  border-color: #18191b;
 }
 #logo .cog.b {
   top: calc(50% - 1.1em);
@@ -281,6 +285,7 @@ body {
 }
 #content .layer-top {
   z-index: 2;
+  position: relative;
 }
 #content .timestamp {
   color: #858894;
@@ -293,25 +298,29 @@ body {
   z-index: 0;
 }
 #content .cog .wheel {
-  border-color: #ffffff;
+  border-color: #1e1f22;
 }
 #content .cog .tooth {
-  background: #ffffff;
+  background: #1e1f22;
 }
 #content .cog.d {
   top: -0.5em;
   right: -0.5em;
-  opacity: 0.02;
 }
 #content .cog.e {
   top: 0.3em;
   right: 0.23em;
-  opacity: 0.05;
   -webkit-transform: rotate(9.5deg);
   -moz-transform: rotate(9.5deg);
   -ms-transform: rotate(9.5deg);
   -o-transform: rotate(9.5deg);
   transform: rotate(9.5deg);
+}
+#content .cog.e .wheel {
+  border-color: #1f2024;
+}
+#content .cog.e .tooth {
+  background: #1f2024;
 }
 small.liner {
   display: block;

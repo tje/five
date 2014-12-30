@@ -1,9 +1,9 @@
 @teeth: 12;
-@speed: 16s;
+@speed: 60s;
 @fgColor: #242529;
 @bgColor: transparent;
 @textColor: #fff;
-@cogAColor: @fgColor;
+@cogAColor: #18191b;
 @fontSize: 35;
 @poiX: 75%;
 
@@ -147,8 +147,12 @@ body {
     z-index: 2;
     font-size: 1.75em;
   }
-  .cog.a .wheel {
+  .cog.a .wheel,
+  .cog.a .tooth {
     background: @cogAColor;
+  }
+  .cog.a .wheel {
+    border-color: @cogAColor;
   }
   .cog.b {
     top: calc(~"50% - 1.1em");
@@ -213,7 +217,10 @@ body {
     font-size: smaller;
   }
 
-  .layer-top { z-index: 2; }
+  .layer-top {
+    z-index: 2;
+    position: relative;
+  }
 
   .timestamp {
     color: lighten(@fgColor, 40%);
@@ -225,19 +232,19 @@ body {
     font-size: 39em;
     pointer-events: none;
     z-index: 0;
-    .wheel { border-color: @textColor; }
-    .tooth { background: @textColor; }
+    .wheel { border-color: darken(@fgColor, 2.5%); }
+    .tooth { background: darken(@fgColor, 2.5%); }
   }
   .cog.d {
     top: -0.5em;
     right: -0.5em;
-    opacity: 0.02;
   }
   .cog.e {
     top: 0.3em;
     right: 0.23em;
-    opacity: 0.05;
     .transform(rotate(9.5deg));
+    .wheel { border-color: darken(@fgColor, 2%); }
+    .tooth { background: darken(@fgColor, 2%); }
   }
 }
 
