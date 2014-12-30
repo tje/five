@@ -5,6 +5,7 @@ body {
   font-size: 0;
   text-align: center;
   background: #ffffff;
+  overflow-x: hidden;
 }
 .alignment {
   display: inline-block;
@@ -188,8 +189,8 @@ body {
   }
 }
 #logo {
-  font-size: 25vw;
-  font-size: 25vmax;
+  font-size: 35vw;
+  font-size: 35vmax;
   font-weight: 600;
   line-height: 0.5em;
   height: 0.5em;
@@ -208,14 +209,14 @@ body {
   z-index: 5;
   color: #ffffff;
   top: 0;
-  left: calc(60% - 0.5em);
+  left: calc(75% - 0.5em);
   width: 1em;
   text-align: center;
 }
 #logo .cog {
   position: absolute;
   top: calc(50% - 0.6em);
-  left: calc(60% - 0.6em);
+  left: calc(75% - 0.6em);
   z-index: 2;
   font-size: 1.75em;
 }
@@ -224,7 +225,7 @@ body {
 }
 #logo .cog.b {
   top: calc(50% - 1.1em);
-  left: calc(60% - 1.55em);
+  left: calc(75% - 1.55em);
   -webkit-transform: rotateY(180deg) rotateZ(19deg);
   -moz-transform: rotateY(180deg) rotateZ(19deg);
   -ms-transform: rotateY(180deg) rotateZ(19deg);
@@ -234,7 +235,7 @@ body {
 }
 #logo .cog.c {
   top: 0;
-  left: calc(60% - 1.35em);
+  left: calc(75% - 1.35em);
   z-index: 1;
   font-size: 4em;
   opacity: 0.5;
@@ -243,7 +244,44 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 40%;
+  width: 25%;
   height: 100%;
   background: #242529;
+}
+#title {
+  color: #54565f;
+  width: 100%;
+  font-size: 24.5vw;
+  font-size: 24.5vmin;
+  font-family: dorsa;
+  font-weight: 200;
+  text-align: left;
+  line-height: 1em;
+  box-sizing: border-box;
+  padding: 0 0.15em;
+}
+#content {
+  padding: 0.75em;
+  font-size: 4.375vh;
+  font-size: 4.375vmin;
+  color: #242529;
+  font-family: source-sans-pro;
+  font-weight: 200;
+  text-align: left;
+}
+#content h1 {
+  margin: 0;
+  font-weight: 200;
+  color: #242529;
+}
+#content p {
+  font-size: smaller;
+}
+#content .timestamp {
+  color: #858894;
+  padding-left: 1ch;
+}
+small.liner {
+  display: block;
+  color: #54565f;
 }
