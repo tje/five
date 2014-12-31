@@ -4,6 +4,7 @@
 @bgColor: transparent;
 @textColor: #fff;
 @cogAColor: #18191b;
+@textAccent: #f00;
 @fontSize: 35;
 @poiX: 75%;
 
@@ -181,7 +182,7 @@ body {
 }
 
 #title {
-  @fs: @fontSize * 0.7;
+  @fs: @fontSize * 0.57;
   color: lighten(@fgColor, 20%);
   width: 100%;
   font-size: ~"@{fs}vw";
@@ -192,7 +193,40 @@ body {
   line-height: 1em;
   box-sizing: border-box;
   padding: 0 0.15em;
+  position: relative;
+  z-index: 1;
   //margin: 0 0 -0.2em;
+
+  span.text {
+    display: inline-block;
+    position: relative;
+
+  }
+  span.text::after {
+    content: 'Modem';
+    position: absolute;
+    left: 0;
+    color: desaturate(darken(@textAccent, 15%), 40%);
+
+    background: transparent;
+    background: -webkit-linear-gradient(@textAccent, desaturate(darken(@textAccent, 30%), 95%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-filter: drop-shadow(0 0 1px #000) drop-shadow(0 1px 0 #000);
+  }
+  span.text::before {
+    content: 'Modem';
+    position: absolute;
+    color: transparent;
+
+    background: transparent;
+    background: -webkit-linear-gradient(transparent 55%, #000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-filter: blur(3px) drop-shadow(0 0 10px #000);
+    .transform(skewX(-25deg));
+    .transform-origin(0 0.82em);
+  }
 }
 
 #content {
