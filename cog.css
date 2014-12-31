@@ -253,16 +253,27 @@ body {
   background: #242529;
 }
 #title {
-  color: #54565f;
-  width: 100%;
-  font-size: 24.5vw;
-  font-size: 24.5vmin;
-  font-family: dorsa;
-  font-weight: 200;
+  color: #18191b;
+  font-size: 17.5vw;
+  font-size: 17.5vmin;
+  font-family: 'Forum', serif;
+  font-weight: 400;
   text-align: left;
   line-height: 1em;
   box-sizing: border-box;
   padding: 0 0.15em;
+  margin-top: 0.5em;
+  margin-left: 0.1em;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleX(0.65);
+  -moz-transform: scaleX(0.65);
+  -ms-transform: scaleX(0.65);
+  -o-transform: scaleX(0.65);
+  transform: scaleX(0.65);
 }
 #content {
   padding: 0.75em;
@@ -270,7 +281,7 @@ body {
   font-size: 4.375vmin;
   color: #ffffff;
   background: #242529;
-  font-family: source-sans-pro;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 200;
   text-align: left;
   position: relative;
