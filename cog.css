@@ -235,14 +235,24 @@ body {
   -ms-transform: rotateY(180deg) rotateZ(19deg);
   -o-transform: rotateY(180deg) rotateZ(19deg);
   transform: rotateY(180deg) rotateZ(19deg);
-  opacity: 0.75;
+}
+#logo .cog.b .wheel {
+  border-color: #60626d;
+}
+#logo .cog.b .tooth {
+  background: #60626d;
 }
 #logo .cog.c {
   top: 0;
   left: calc(75% - 1.35em);
   z-index: 1;
   font-size: 4em;
-  opacity: 0.5;
+}
+#logo .cog.c .wheel {
+  border-color: #a0a3ac;
+}
+#logo .cog.c .tooth {
+  background: #a0a3ac;
 }
 #logo .mask-r {
   position: absolute;

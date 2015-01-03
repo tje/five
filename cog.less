@@ -159,7 +159,8 @@ body {
     left: calc(~"@{poiX} - 1.55em");
     .transform(rotateY(180deg) rotateZ(19deg));
     //.teeth { .animation-delay(-.87s); }
-    opacity: 0.75;
+    .wheel { border-color: lighten(@fgColor, 25%); }
+    .tooth { background: lighten(@fgColor, 25%); }
   }
 
   .cog.c {
@@ -167,7 +168,8 @@ body {
     left: calc(~"@{poiX} - 1.35em");
     z-index: 1;
     font-size: 4em;
-    opacity: 0.5;
+    .wheel { border-color: lighten(@fgColor, 50%); }
+    .tooth { background: lighten(@fgColor, 50%); }
   }
 
   .mask-r {
